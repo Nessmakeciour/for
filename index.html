@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CabinetPlus - Fournisseurs</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <!-- Side Navigation -->
+  <div id="side-nav" class="side-nav">
+    <div class="user">
+      <!-- Icône utilisateur -->
+      <i class="fas fa-user-circle user-icon"></i>
+      <!-- Image utilisateur -->
+      <img src="image/midoune.jpg" alt="Utilisateur" class="user-img">
+      <div>
+        <h2>midoune</h2>
+        <p>midoune@gmail.com</p>
+      </div>
+    </div>
+    <a href="javascript:void(0)" class="close-btn" onclick="closeSideNav()">&times;</a>
+    <a href="../client/index.php">
+      <i class="fas fa-users"></i> Page de clients
+    </a>
+    <a href="./index.php">
+      <i class="fas fa-box-open"></i> Pages de produits
+    </a>
+    <a href="products.php">
+      <i class="fas fa-tooth"></i> Pages de prothèses
+    </a>
+    <a href="../fournisseur/suppliers.php">
+      <i class="fas fa-truck"></i> Fournisseur
+    </a>
+    <a href="bonds.php">
+      <i class="fas fa-file-invoice-dollar"></i> Bon d'achat
+    </a>
+    <a href="logout.php">
+      <i class="fas fa-sign-out-alt"></i> Déconnexion
+    </a>
+  </div>
+
+  <!-- Overlay -->
+  <div id="overlay" class="overlay" onclick="closeSideNav()"></div>
+
+  <!-- Header -->
+  <header class="header fixed-top">
+    <div class="container">
+      <div class="row align-items-center justify-content-between">
+        <div>
+          <img src="./image/tooth.png" alt="logo">
+          <a href="#home" class="logo">Cabinet<span>Plus</span></a>
+        </div>
+
+        <nav class="nav">
+          <a href="#home">Accueil</a>
+          <a href="#about">About</a>
+          <a href="#review">Revues</a>
+          <a href="../page-dent/Calendrier/calendrier/calendar.html">Calendrier</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button class="link-btn">Connexion</button>
+      </div>
+      <!-- Icone du menu hamburger -->
+      <span class="open-btn" onclick="openSideNav()">&#9776;</span>
+    </div>
+  </header>
+  <!-- header section ends -->
+
+  <main class="main-content">
+    <div class="title-section">
+      <h1>Gestion des <span class="tittiti">Fournisseurs</span></h1>
+      <p>Ajoutez, modifiez et suivez vos fournisseurs pour une gestion optimale de vos stocks et commandes.</p>
+    </div>
+
+    <section class="fournisseurs-section">
+      <div class="fournisseur-card">
+        <h2>Ajouter un Fournisseur</h2>
+        <p>Gérez facilement de nouveaux fournisseurs en quelques clics.</p>
+        <a href="add_fournisseur.php" class="btn-primary">Ajouter Fournisseur</a>
+      </div>
+      <div class="fournisseur-card">
+        <h2>Consulter Fournisseurs</h2>
+        <p>Accédez à la liste complète de vos fournisseurs et à leurs détails.</p>
+        <a href="suppliers.php" class="btn-primary" id="view-fournisseurs-btn">Consulter</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
